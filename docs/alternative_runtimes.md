@@ -3,7 +3,7 @@
 To use [rkt](https://github.com/coreos/rkt) as the container runtime run:
 
 ```shell
-$ minikube start \
+minikube start \
     --network-plugin=cni \
     --container-runtime=rkt
 ```
@@ -14,7 +14,7 @@ $ minikube start \
 To use [CRI-O](https://github.com/kubernetes-incubator/cri-o) as the container runtime, run:
 
 ```bash
-$ minikube start \
+minikube start \
     --network-plugin=cni \
     --container-runtime=cri-o \
     --bootstrapper=kubeadm
@@ -23,7 +23,7 @@ $ minikube start \
 Or you can use the extended version:
 
 ```bash
-$ minikube start \
+minikube start \
     --network-plugin=cni \
     --extra-config=kubelet.container-runtime=remote \
     --extra-config=kubelet.container-runtime-endpoint=/var/run/crio/crio.sock \
